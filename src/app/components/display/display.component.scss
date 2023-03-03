@@ -1,0 +1,14 @@
+pre {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  overflow: auto;
+}
+
+:host {
+  display: block;
+  font-family: monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}

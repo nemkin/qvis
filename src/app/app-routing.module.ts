@@ -1,7 +1,13 @@
-import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { DisplayComponent } from './components/display/display.component';
+import { FileSelectorComponent } from './components/file-selector/file-selector.component';
+import { NgModule } from '@angular/core';
+
+const routes: Routes = [
+  { path: '', component: FileSelectorComponent },
+  { path: 'display', component: DisplayComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
