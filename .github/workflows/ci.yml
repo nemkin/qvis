@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies and build
         run: |
           npm install
-          npm run build -- --configuration production
+          npm run build -- --configuration production --build-optimizer
 
       - name: Deploy Angular App To GitHub Pages
         uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.2
