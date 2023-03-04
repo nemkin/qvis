@@ -1,31 +1,20 @@
 name: Deploy Angular App
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Git checkout
         uses: actions/checkout@v2
-
-      - name: Install Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'
-
-      - name: Install dependencies and build
-        run: |
-          npm install
-          npm run build -- --configuration production --build-optimizer
-
       - name: Deploy Angular App To GitHub Pages
-        uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.2
+        uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.1
         with:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
+          build_configuration: production
           base_href: /qvis/
           deploy_branch: gh-pages
           angular_dist_build_folder: dist/qvis
