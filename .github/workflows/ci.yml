@@ -25,7 +25,7 @@ jobs:
       - name: Deploy Angular App To GitHub Pages
         uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.2
         with:
-          github_access_token: ${{ secrets.ACCESS_TOKEN }}
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
           base_href: /qvis/
           deploy_branch: gh-pages
           angular_dist_build_folder: dist/qvis
