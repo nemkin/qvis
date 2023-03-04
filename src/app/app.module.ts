@@ -1,3 +1,5 @@
+import * as echarts from 'echarts';
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -6,6 +8,7 @@ import { FileSelectorComponent } from './components/file-selector/file-selector.
 import { HighlightService } from './services/highlight.service';
 import { MaterialModule } from './material/material.module';
 import { NgModule } from '@angular/core';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,8 @@ import { NgModule } from '@angular/core';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    NgxEchartsModule.forRoot({ echarts })
   ],
   providers: [HighlightService],
   bootstrap: [AppComponent]
