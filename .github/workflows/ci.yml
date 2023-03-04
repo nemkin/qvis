@@ -1,4 +1,5 @@
 name: Deploy Angular App
+
 on:
   push:
     branches: [ main ]
@@ -18,3 +19,6 @@ jobs:
           base_href: /qvis/
           deploy_branch: gh-pages
           angular_dist_build_folder: dist/qvis
+
+permissions:
+  contents: write
