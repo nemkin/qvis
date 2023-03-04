@@ -26,4 +26,6 @@ jobs:
         uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.2
         with:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
-          build_dir: dist/qvis
+          base_href: /qvis/
+          deploy_branch: gh-pages
+          angular_dist_build_folder: dist/qvis
