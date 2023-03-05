@@ -56,9 +56,9 @@ export class DisplayComponent implements OnInit {
     const simulation = this.quantumWalk.simulations[0];
     const steps = simulation.counts.length;
 
-    for(let i = 0; i<vertices; ++i) {
-      for(let j=0; j<steps; ++j) {
-        data.push([i, j, simulation.counts[i][j]]);
+    for(let i=0; i<steps; ++i) {
+      for(let j=0; j<vertices; ++j) {
+        data.push([j, i, simulation.counts[i][j]]);
       }
     }
 
@@ -90,7 +90,7 @@ export class DisplayComponent implements OnInit {
         top: 'center',
         calculable: true,
         realtime: false,
-        splitNumber: 8,
+        splitNumber: 16,
         inRange: {
           color: [
             '#313695',
@@ -103,13 +103,21 @@ export class DisplayComponent implements OnInit {
             '#fdae61',
             '#f46d43',
             '#d73027',
-            '#a50026'
+            '#a50026',
+            '#a50026',
+            '#a50026',
+            '#a50026',
+            '#a50026',
+            '#a50026',
+            '#a50026',
+            '#a50026',
+            '#a50026',
           ]
         }
       },
       series: [
         {
-          name: 'Gaussian',
+          name: 'Eloszlás',
           type: 'heatmap',
           data: data,
           emphasis: {
