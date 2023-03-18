@@ -2,6 +2,7 @@ import * as echarts from 'echarts';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { DisplayComponent } from './components/display/display.component';
 import { FileSelectorComponent } from './components/file-selector/file-selector.component';
@@ -20,6 +21,7 @@ import { NgxEchartsModule } from 'ngx-echarts';
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
+    BrowserAnimationsModule,
     NgxEchartsModule.forRoot({ echarts })
   ],
   providers: [HighlightService],
